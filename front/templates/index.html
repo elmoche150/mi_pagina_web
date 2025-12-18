@@ -15,25 +15,46 @@
 <body>
   <header>
 
-    <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+    <!-- efecto de transparencia (css) -->
     <div class="overlay"></div>
 
-    <!-- The HTML5 video element that will create the background video on the header -->
+    <!-- Vide del Header -->
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src="https://cdn.coverr.co/videos/coverr-cinematic-snowy-mountains-7615/720p.mp4" type="video/mp4">
+      <source src= {{url_for('static',filename= 'images/gif_header.mp4', _external=true)}}> type="video/mp4">
     </video>
 
     <!-- The header content -->
     <div class="container h-100">
       <div class="d-flex h-100 text-center align-items-center">
         <div class="w-100 text-white">
-          <h1 class="display-3">Video Header</h1>
-          <p class="lead mb-0">Using HTML5 Video and Bootstrap</p>
+          <h1 class="display-3">Pedro Perez Mochetti</h1>
+          <p class="lead mb-0">Estudiante de FIUBA</p>
         </div>
       </div>
     </div>
-  </header>
 
+
+
+  </header>
+      
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mis Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <!-- Page section example for content below the video header -->
   <section class="my-5">
     <div class="container">
@@ -49,6 +70,7 @@
       </div>
     </div>
   </section>
+  
 
 
   <footer>

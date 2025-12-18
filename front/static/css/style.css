@@ -1,8 +1,9 @@
+/*HEADER*/
 header {
   position: relative;
   background-color: black;
-  height: 75vh;
-  min-height: 25rem;
+  height: 25vh;
+  min-height: 10rem;
   width: 100%;
   overflow: hidden;
 }
@@ -33,21 +34,25 @@ header .overlay {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: 0.5;
+  background-color: #240D3D;
+  opacity: 0.7;
   z-index: 1;
 }
+.navbar-nav{
+  position: relative;
+  left: 825px;
+}
 
-/* Media Query for devices withi coarse pointers and no hover functionality */
+.navbar-custom{
+    background-color: #240D3D;
+}
 
-/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+.navbar-custom .nav-link{
+  color: white;
+  transition: color 0.3s ease;
+}
 
-@media (pointer: coarse) and (hover: none) {
-  header {
-    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-  }
+.navbar-custom .nav-link:hover {
+  color: #b388ff; 
 
-  header video {
-    display: none;
-  }
 }
