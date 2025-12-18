@@ -43,13 +43,72 @@ header .text-custom{
   color: #b388ff;
 }
 
+#titulo-header {
+  margin: auto;
+  font-size: 3.5rem;
+  font-weight: 300;
+  animation: lights 5s 750ms linear infinite;
+}
+
+@keyframes lights {
+  0% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+  30% { 
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  40% { 
+    color: hsl(230, 100%, 95%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 90%, 0.5),
+      -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+      0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  70% {
+    color: hsl(230, 80%, 90%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.5),
+      0 0 0.125em hsla(320, 100%, 60%, 0.5),
+      0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+      -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+  }
+  
+  100% {
+    color: hsl(230, 40%, 80%);
+    text-shadow:
+      0 0 1em hsla(320, 100%, 50%, 0.2),
+      0 0 0.125em hsla(320, 100%, 60%, 0.3),
+      1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+      -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+  }
+  
+}
+
+/*FIN HEADER*/
+
+/*NAVBAR*/
+
 .navbar {
   z-index: 1030; 
 }
 
 .navbar-nav{
   position: relative;
-  left: 825px;
+  right: 825px;
 }
 
 .navbar-custom{
@@ -66,12 +125,15 @@ header .text-custom{
 
 }
 
+/*FIN NAVBAR*/
+
+/*FONDO*/
 .hero {
   position: relative;
   background-color: black;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero video {
@@ -101,7 +163,76 @@ header .text-custom{
   opacity: 0.9;
   z-index: 1;
 }
+/*FIN FONDO*/
+
+/*TITULO EN 3D*/
+@import url(https://fonts.googleapis.com/css?family=Concert+One);
+
+.efecto_3d h1 {
+  animation:glow 10s ease-in-out infinite;
+  
+}
 
 
+
+* { box-sizing:border-box; } 
+
+body {
+  background:#0a0a0a;
+  overflow-y:auto;
+  text-align:center;
+}
+
+figure {
+  animation:wobble 5s ease-in-out infinite;
+  transform-origin:center center;
+  transform-style:preserve-3d;
+}
+
+@keyframes wobble {
+  0%,100%{ transform:rotate3d(1,1,0,40deg); }
+  25%{ transform:rotate3d(-1,1,0,40deg); }
+  50%{ transform:rotate3d(-1,-1,0,40deg); }
+  75%{ transform:rotate3d(1,-1,0,40deg); }
+}
+
+.efecto_3d h1 {
+  display:block;
+  width:100%;
+  padding:40px;
+  line-height:1.5;
+  font:900 8em 'Concert One', sans-serif;
+  text-transform:uppercase;
+  position:absolute;
+  color:#0a0a0a;
+}
+
+@keyframes glow {
+  0%,100%{ text-shadow:0 0 30px purple; }
+  25%{ text-shadow:0 0 30px pink; }
+  50%{ text-shadow:0 0 30px violet; }
+  75%{ text-shadow:0 0 30px magenta; }
+}
+
+.efecto_3d h1:nth-child(2){ transform:translateZ(5px); }
+.efecto_3d h1:nth-child(3){ transform:translateZ(10px);}
+.efecto_3d h1:nth-child(4){ transform:translateZ(15px); }
+.efecto_3d h1:nth-child(5){ transform:translateZ(20px); }
+.efecto_3d h1:nth-child(6){ transform:translateZ(25px); }
+.efecto_3d h1:nth-child(7){ transform:translateZ(30px); }
+.efecto_3d h1:nth-child(8){ transform:translateZ(35px); }
+.efecto_3d h1:nth-child(9){ transform:translateZ(40px); }
+.efecto_3d h1:nth-child(10){ transform:translateZ(45px); }
+
+figure.efecto_3d {
+  position: relative;
+  height: 120vh; /* o lo que quieras */
+}
+
+ body {
+  overflow-x: hidden;
+}
+
+/*FIN TITULO 3D*/
 
 
