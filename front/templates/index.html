@@ -15,18 +15,18 @@
 <body>
   <header>
 
-    <!-- efecto de transparencia (css) -->
+    <!-- fecto de transparencia (css) -->
     <div class="overlay"></div>
 
-    <!-- Vide del Header -->
+    <!-- Video del Header -->
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-      <source src= {{url_for('static',filename= 'images/gif_header.mp4', _external=true)}}> type="video/mp4">
+      <source src= {{url_for('static',filename= 'images/header_gif.mp4', _external=true)}}> type="video/mp4">
     </video>
 
-    <!-- The header content -->
+    <!-- Contenido del header -->
     <div class="container h-100">
       <div class="d-flex h-100 text-center align-items-center">
-        <div class="w-100 text-white">
+        <div class="w-100 text-custom">
           <h1 class="display-3">Pedro Perez Mochetti</h1>
           <p class="lead mb-0">Estudiante de FIUBA</p>
         </div>
@@ -37,7 +37,7 @@
 
   </header>
       
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -55,21 +55,29 @@
       </ul>
     </div>
   </nav>
-  <!-- Page section example for content below the video header -->
-  <section class="my-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <p>The HTML5 video element uses an mp4 video as a source. Change the source video to add in your own background! The header text is vertically centered using flex utilities that are built into Bootstrap.</p>
-          <p>The overlay color and opacity can be changed by modifying the <code>background-color</code> and <code>opacity</code> properties of the <code>.overlay</code> class in the CSS.</p>
-          <p>Set the mobile fallback image in the CSS by changing the background image of the header element within the media query at the bottom of the CSS snippet.</p>
-          <p class="mb-0">
-            Created by <a href="https://startbootstrap.com">Start Bootstrap</a>
-          </p>
+
+  
+  <div class="hero">
+
+      <!--Video de fondo -->
+    <div class="overlay"></div>
+
+    <video playsinline autoplay muted loop>
+      <source src={{url_for('static', filename='images/fondo_body.mp4', _external=true)}} type="video/mp4">
+    </video>
+
+    <!--todo el contenido central de inicio -->
+    <div class="container h-100">
+      <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-custom">
+
+        <!--todo el contenido central de inicio -->
+
         </div>
       </div>
     </div>
-  </section>
+  </div>
+
   
 
 
