@@ -27,7 +27,7 @@
     <div class="container h-100">
       <div class="d-flex h-100 text-center align-items-center">
         <div class="w-100 text-custom">
-          <h1 class="display-3" id="titulo-header">Pedro Perez Mochetti</h1>
+          <h1 class="display-3 titulos">Pedro Perez Mochetti</h1>
           <p class="lead mb-0">Estudiante de FIUBA</p>
         </div>
       </div>
@@ -86,21 +86,57 @@
             <h1>BIENVENIDOS A MI PORTAFOLIO</h1>
             <h1>BIENVENIDOS A MI PORTAFOLIO</h1>  
           </figure>
-       <div class="d-flex align-items-start justify-content-center flex-wrap mt-5">
-        <div class="me-4">
-          <img class="imagenes" src="{{url_for('static', filename='images/yo.png', _external=true)}}" alt="yo mismo">
-        </div>
-
-        <div class="contenedor-revelado">
-          <p class="texto-multilinea">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis impedit laboriosam vitae voluptate corrupti consequatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis impedit laboriosam vitae voluptate corrupti consequatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis impedit laboriosam vitae voluptate corrupti consequatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis impedit laboriosam vitae voluptate corrupti consequatur.
-          </p>
-        </div>
-      </div>
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex align-items-start justify-content-center flex-wrap mt-5">
+                  <div class="me-4">
+                    <img id="imagen1" src="{{url_for('static', filename='images/yo.png', _external=true)}}" alt="yo mismo">
+                  </div>
+                  <div class="contenedor-revelado">
+                    <h2 class="titulos">¿QUIEN SOY?</h2>
+                    <p class="texto-multilinea"> Soy un estudiante de Ingeniería en Informática en la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA). Inicié la carrera en 2023 y desde entonces me formo de manera constante en el área de la informática, con un fuerte interés por el desarrollo de software y la tecnología en general. Me considero una persona curiosa, exigente con la calidad de lo que hago y siempre dispuesta a aprender cosas nuevas, tanto dentro como fuera del ámbito académico. Si queres contactarme podes hacerlo en el apartado de:<a class="nav-link" href="#">Contacto</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex align-items-start justify-content-center flex-wrap mt-5">
+                  <div>
+                    <h2 class="titulos">TECNOLOGIAS QUE UTILIZO</h2>
+                    <img  id="imagen2" src="{{url_for('static', filename='images/tecnologias.png', _external=true)}}" alt="yo mismo">
+                  </div>
+                  <div class="me-4">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="d-flex align-items-start justify-content-center flex-wrap mt-5">
+                  <div class="me-4">
+                    <img id="imagen3" src="{{url_for('static', filename='images/galaxia.png', _external=true)}}" alt="yo mismo">
+                  </div>
+                  <div class="contenedor-revelado">
+                    <h2 class="titulos">MIS PROYECTOS</h2>
+                    <p class="texto-multilinea"> En esta pagina comparto los proyectos que voy desarrollando a lo largo de mi carrera, tanto los realizados en el ámbito académico como aquellos que surgen de forma personal. Me interesa no solo mostrar el resultado final, sino también el proceso detrás de cada proyecto, las decisiones técnicas y los problemas que fui resolviendo en el camino. Este sitio funciona como un registro de aprendizaje y experimentación constante. Para conocer cada trabajo en profundidad, podés dirigirte al apartado de <a class="nav-link" href="#">Mis Proyectos</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
           
         </div>
       </div>
     </div>
+
+
+
 
   </div> <!--FIN DE LA ESTRUCTURA PRINCIPAL-->
 
