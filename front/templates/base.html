@@ -24,7 +24,7 @@
     </video>
 
     <!-- Contenido del header -->
-    <div class="container h-100">
+    <div class="container container-header h-100">
       <div class="d-flex h-100 text-center align-items-center">
         <div class="w-100 text-custom">
           <h1 class="display-3 titulos">Pedro Perez Mochetti</h1>
@@ -32,11 +32,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
   </header>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
@@ -52,15 +47,30 @@
           <a class="nav-link" href="#">Mis Proyectos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
+          <a class="nav-link" href="{{url_for('contacto_bp.contacto', _external=true)}}">Contacto</a>
         </li>
       </ul>
     </div>
   </nav>
   
-  {%block content %}
+  <div class="hero">   <!--Estructura principal-->
 
-  {%endblock%}
+    <!--Video de fondo -->
+    <div class="overlay"></div> 
+
+    <video playsinline autoplay muted loop>
+      <source src={{url_for('static', filename='images/fondo_body.mp4', _external=true)}} type="video/mp4">
+    </video>
+    <div class="container villian">
+      <div class="d-flex text-center">
+        <div class="w-100 text-custom">
+          {%block content %}
+
+          {%endblock%}
+        </div>
+      </div>
+    </div><!--FIN DE LA ESTRUCTURA PRINCIPAL-->
+  </div>
 
   <footer class="site-footer"> <!-- INICIO DEL FOOTER -->
     <div class="overlay"></div>
@@ -92,7 +102,7 @@
           <h6>Atajos</h6>
           <ul class="footer-links">
             <li><a href="{{url_for('index_bp.index', _external=true)}}">Inicio</a></li>
-            <li><a href="http://scanfcode.com/contact/">Contacto</a></li>
+            <li><a href="{{url_for('contacto_bp.contacto', _external=true)}}">Contacto</a></li>
             <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Mis Proyectos</a></li>
           </ul>
         </div>

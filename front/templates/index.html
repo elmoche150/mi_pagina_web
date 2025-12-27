@@ -1,23 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-
-  <div class="hero">   <!--Estructura principal-->
-
-      <!--Video de fondo -->
-    <div class="overlay"></div> 
-
-    <video playsinline autoplay muted loop>
-      <source src={{url_for('static', filename='images/fondo_body.mp4', _external=true)}} type="video/mp4">
-    </video>
-
     <!--todo el contenido central de inicio -->
 
     <!--efecto 3d  -->
-    <div class="container villian">
-      <div class="d-flex text-center">
-        <div class="w-100 text-custom">
           <figure class ="efecto_3d">
             <h1>BIENVENIDOS A MI PORTAFOLIO</h1>
             <h1>BIENVENIDOS A MI PORTAFOLIO</h1>
@@ -39,7 +25,7 @@
                   </div>
                   <div class="contenedor-revelado">
                     <h2 class="titulos">¿QUIEN SOY?</h2>
-                    <p class="texto-multilinea"> Soy un estudiante de Ingeniería en Informática en la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA). Inicié la carrera en 2023 y desde entonces me formo de manera constante en el área de la informática, con un fuerte interés por el desarrollo de software y la tecnología en general. Me considero una persona curiosa, exigente con la calidad de lo que hago y siempre dispuesta a aprender cosas nuevas, tanto dentro como fuera del ámbito académico. Si queres contactarme podes hacerlo en el apartado de:<a class="nav-link" href="#">Contacto</a></p>
+                    <p class="texto-multilinea"> Soy un estudiante de Ingeniería en Informática en la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA). Inicié la carrera en 2023 y desde entonces me formo de manera constante en el área de la informática, con un fuerte interés por el desarrollo de software y la tecnología en general. Me considero una persona curiosa, exigente con la calidad de lo que hago y siempre dispuesta a aprender cosas nuevas, tanto dentro como fuera del ámbito académico. Si queres contactarme podes hacerlo en el apartado de:<a class="nav-link" href="{{url_for('contacto_bp.contacto', _external=true)}}">Contacto</a></p>
                   </div>
                 </div>
               </div>
@@ -74,10 +60,4 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-          
-        </div>
-      </div>
-    </div>
-  </div> <!--FIN DE LA ESTRUCTURA PRINCIPAL-->
-  
 {% endblock %}

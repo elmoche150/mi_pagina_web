@@ -1,6 +1,7 @@
 /*HEADER*/
 header {
   position: relative;
+  z-index: 10;
   background-color: black;
   height: 25vh;
   min-height: 10rem;
@@ -405,3 +406,36 @@ footer .overlay {
   z-index: 1;
 }
 /*FIN DEL FOOTER*/
+
+/*FORMULARIO*/
+input, textarea{
+ background-color: #1a0a2e!important;
+ border: 1px solid #b388ff!important;
+ color: #b388ff !important;
+}
+input::placeholder, textarea::placeholder {
+    color: #b388ff !important; /* Aquí pones el color que quieras */
+    opacity: 1;                /* Firefox reduce la opacidad por defecto, esto lo arregla */
+}
+
+
+.texto-multilinea-chico{
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+
+}
+
+.btn-outline-success{
+  border: 1px solid #b388ff!important;
+   color: #b388ff!important;
+}
+
+.btn-outline-success:hover{
+  background-color: #1a0a2e!important;
+}
+/*FIN DEL FORMULARIO*/
