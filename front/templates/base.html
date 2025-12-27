@@ -46,7 +46,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="{{url_for('index', _external=true)}}">Inicio</a>
+          <a class="nav-link" href="{{url_for('index_bp.index', _external=true)}}">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Mis Proyectos</a>
@@ -57,7 +57,7 @@
       </ul>
     </div>
   </nav>
-
+  
   {%block content %}
 
   {%endblock%}
@@ -91,7 +91,7 @@
         <div class="col-xs-6 col-md-3">
           <h6>Atajos</h6>
           <ul class="footer-links">
-            <li><a href="{{url_for('index', _external=true)}}">Inicio</a></li>
+            <li><a href="{{url_for('index_bp.index', _external=true)}}">Inicio</a></li>
             <li><a href="http://scanfcode.com/contact/">Contacto</a></li>
             <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Mis Proyectos</a></li>
           </ul>
