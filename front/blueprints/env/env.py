@@ -17,3 +17,6 @@ def config_mail(app):
     app.config['MAIL_USE_SSL'] = os.getenv('MAIL_USE_SSL') == "True"
     app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_DEFAULT_SENDER')
     mail.init_app(app)
+
+def back_url(app):
+    app.config['BACK_URL'] = os.getenv('BACK_URL')

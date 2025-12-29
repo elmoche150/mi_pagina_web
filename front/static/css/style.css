@@ -280,6 +280,14 @@ figure.efecto_3d {
   border-radius: 10px
 }
 
+
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center top; /* o center, bottom, left, etc */
+}
+
 /*FIN IMAGENES*/
 
 
@@ -444,9 +452,10 @@ input::placeholder, textarea::placeholder {
 }
 /*FIN DEL FORMULARIO*/
 
-.card-img-top {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  object-position: center top; /* o center, bottom, left, etc */
+/*LOGIN*/
+.bi{
+  color: white;
+}
+.bi:hover{
+  color: #b388ff;
 }

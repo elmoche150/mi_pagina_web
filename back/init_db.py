@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 import mysql.connector
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+BASE_DIR = os.path.dirname(__file__)
 
 DOTENV_PATH = os.path.join(BASE_DIR, ".env")
 
