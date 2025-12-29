@@ -1,3 +1,4 @@
+
 /*HEADER*/
 header {
   position: relative;
@@ -322,6 +323,9 @@ figure.efecto_3d {
   font-size:15px;
   line-height:24px;
   color:#737373;
+
+  padding-top: 4rem;
+  border-top: 1px solid rgba(179, 136, 255, 0.2);
 }
 
 
@@ -342,6 +346,9 @@ figure.efecto_3d {
   color:#3366cc;
   text-decoration:none;
 }
+
+
+
 .footer-links
 {
   padding-left:0;
@@ -368,26 +375,22 @@ figure.efecto_3d {
 
 footer {
   position: relative;
+  z-index: 10;
   background-color: black;
-  height: 25vh;
-  min-height: 10rem;
   width: 100%;
+  padding: 4rem 0;
   overflow: hidden;
 }
 
+
+
 footer video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
 }
 
 footer .container {
@@ -405,6 +408,7 @@ footer .overlay {
   opacity: 0.4;
   z-index: 1;
 }
+
 /*FIN DEL FOOTER*/
 
 /*FORMULARIO*/
@@ -439,3 +443,10 @@ input::placeholder, textarea::placeholder {
   background-color: #1a0a2e!important;
 }
 /*FIN DEL FORMULARIO*/
+
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center top; /* o center, bottom, left, etc */
+}

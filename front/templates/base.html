@@ -44,7 +44,7 @@
           <a class="nav-link" href="{{url_for('index_bp.index', _external=true)}}">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mis Proyectos</a>
+          <a class="nav-link" href="{{url_for('mis_proyectos_bp.mis_proyectos', _external=true)}}">Mis Proyectos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{url_for('contacto_bp.contacto', _external=true)}}">Contacto</a>
@@ -103,7 +103,7 @@
           <ul class="footer-links">
             <li><a href="{{url_for('index_bp.index', _external=true)}}">Inicio</a></li>
             <li><a href="{{url_for('contacto_bp.contacto', _external=true)}}">Contacto</a></li>
-            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Mis Proyectos</a></li>
+            <li><a href="{{url_for('mis_proyectos_bp.mis_proyectos', _external=true)}}">Mis Proyectos</a></li>
           </ul>
         </div>
       </div>

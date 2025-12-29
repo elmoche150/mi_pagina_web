@@ -4,6 +4,7 @@ import os
 
 from blueprints.index.index import index_bp
 from blueprints.contacto.contacto import contacto_bp
+from blueprints.mis_proyectos.mis_proyectos import mis_proyectos_bp
 from blueprints.env.env import config_mail
 
 
@@ -15,6 +16,7 @@ config_mail(app)
 
 app.register_blueprint(index_bp, url_prefix="/")
 app.register_blueprint(contacto_bp, url_prefix="/contacto")
+app.register_blueprint(mis_proyectos_bp, url_prefix="/mis_proyectos")
 
 
 if __name__  == "__main__":
