@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-import mysql.connector
+import mysql.connector  
 from mysql.connector import Error
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))

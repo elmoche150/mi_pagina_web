@@ -15,16 +15,16 @@ def registrarse():
     if request.method == 'POST':
         errores = []
 
-        usuario = request.form.get('nombre_usuario')
-        mail = request.form.get('email_usuario')
-        mail_confirmacion = request.form.get('email_confirmacion')
-        contrasena = request.form.get('contrasena_usuario')
+        nombre = request.form.get('nombre')
+        email = request.form.get('email')
+        email_confirmacion = request.form.get('email_confirmacion')
+        contrasena = request.form.get('contrasena')
         contrasena_confirmacion = request.form.get('contrasena_confirmacion')
         
-        if (not usuario) or (not mail) or (not mail_confirmacion) or (not contrasena)or (not contrasena_confirmacion):
+        if (not nombre) or (not email) or (not email_confirmacion) or (not contrasena)or (not contrasena_confirmacion):
             errores.append("FALTAN CAMPOS")
         
-        if  (mail != mail_confirmacion):
+        if  (email != email_confirmacion):
             errores.append("LOS EMAILS NO COINCIDEN")
         
         if  (contrasena != contrasena_confirmacion):
@@ -33,7 +33,7 @@ def registrarse():
         if errores:
             return render_template('registrarse.html', titulo=title, errores=errores)
         
-        data = {"nombre":usuario,"email":mail,"contraseña":contrasena}
-        requests.post(f"{BACK_URL}/datos/registrar", json=data)
+        data = {"nombre":nombre,"email":email,"contrasena":contrasena}
+        requests.post(f"{BACK_URL}/registrarse/registrar", json=data)
 
     return redirect(url_for('index_bp.index'))
